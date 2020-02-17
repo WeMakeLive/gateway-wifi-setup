@@ -14,7 +14,7 @@ run_app() {
   npm start
 }
 
-cd $HOME/gateway-wifi-setup
-run_app > ${HOME}/gateway-wifi-setup-app.log 2>&1
+cd /wifi-ap/vfarm-wifi-setup
+run_app > /wifi-ap/vfarm-wifi-setup-app.log 2>&1
 
 

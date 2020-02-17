@@ -1,4 +1,4 @@
-# gateway-wifi-setup
+# vfarm-wifi-setup
 
 This repo is an Express server that runs on the Moz Gateway device and
 handles the first-time setup required to get the device working:
@@ -21,15 +21,15 @@ instructions for Raspberry Pi and Edison, but that I have not yet been
 able to successfully run on Edison.
 
 If you intend to modify this code and need to test your changes in a real device, please refer
-to: https://github.com/mozilla-iot/gateway-wifi-setup/wiki/Testing-on-WoT-Base-Image
+to: https://github.com/mozilla-iot/vfarm-wifi-setup/wiki/Testing-on-WoT-Base-Image
 
 ### Step 0: clone and install
 
 First, clone this repo and download its dependencies from npm:
 
 ```
-$ git clone https://github.com/mozilla-iot/gateway-wifi-setup
-$ cd gateway-wifi-setup
+$ git clone https://github.com/mozilla-iot/vfarm-wifi-setup
+$ cd vfarm-wifi-setup
 $ npm install
 ```
 
@@ -134,29 +134,29 @@ sudo node index.js
 If you want to run the server on a device that has no network
 connection and no keyboard or monitor, you probably want to set it up
 to run automatically when the device boots up. To do this, copy
-`config/mozilla-gateway-wifi-setup.service` to `/lib/systemd/system`, 
+`config/vfarm-wifi-setup.service` to `/lib/systemd/system`, 
 edit it to set the correct paths for node and for the server code, and then 
 enable
 the service with systemd:
 
 ```
-$ sudo cp config/mozilla-gateway-wifi-setup.service /lib/systemd/system
-$ sudo vi /lib/systemd/system/mozilla-gateway-wifi-setup.service # edit paths as needed
-$ sudo systemctl enable mozilla-gateway-wifi-setup
+$ sudo cp config/vfarm-wifi-setup.service /lib/systemd/system
+$ sudo vi /lib/systemd/system/vfarm-wifi-setup.service # edit paths as needed
+$ sudo systemctl enable vfarm-wifi-setup
 ```
 
 At this point, the server will run each time you reboot.  If you want
 to run it manually without rebooting, do this:
 
 ```
-$ sudo systemctl start mozilla-gateway-wifi-setup
+$ sudo systemctl start vfarm-wifi-setup
 ```
 
 Any output from the server is sent to the systemd journal, and you can
 review it with:
 
 ```
-$ sudo journalctl -u mozilla-gateway-wifi-setup
+$ sudo journalctl -u vfarm-wifi-setup
 ```
 
 Add the -b option to the line above if you just want to view output

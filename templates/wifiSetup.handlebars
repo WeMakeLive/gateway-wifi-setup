@@ -276,13 +276,13 @@
         }
       }
     </script>
-    <title>Mozilla Gateway</title>
+    <title>V-Farm Wifi Setup</title>
   </head>
   <body>
     <form action="/connecting" method="post" id="mainform">
       <div id="step1">
         <div id="maindiv">
-          <h1>Welcome</h1>
+          <h1>Welcome to V-Farm</h1>
           <h3>Connect to a WiFi network?</h3><br>
           {{#networks}}
             <button onclick="window.selectssid(event, '{{{escapeQuotes ssid}}}', {{pwdRequired}})" id="item"
@@ -309,7 +309,6 @@
       </div>
       <input id="ssid" name="ssid" type="hidden" value="">
       <input id="skip" name="skip" type="hidden" value="">
-      <img id="wordmark" alt="Mozilla IoT" src="/moziot-wordmark.png" />
     </form>
   </body>
 </html>

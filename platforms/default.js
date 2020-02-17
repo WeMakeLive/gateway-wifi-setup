@@ -5,10 +5,10 @@ module.exports = {
 
   // ip to be used by the AP
   ap_ip: '192.168.220.1',
-  startGateway: 'systemctl start mozilla-iot-gateway',
-  stopGateway: 'systemctl stop mozilla-iot-gateway',
-  restartGateway: 'systemctl restart mozilla-iot-gateway',
-  stopWifiService: 'systemctl stop mozilla-gateway-wifi-setup',
+  startGateway: '', //systemctl start vfarm-wifi
+  stopGateway: 'systemctl stop vfarm-wifi',
+  restartGateway: '', //systemctl restart vfarm-wifi
+  stopWifiService: 'systemctl stop vfarm-wifi-setup',
 
   // A shell command that outputs the string "COMPLETED" if we are
   // connected to a wifi network and outputs something else otherwise
